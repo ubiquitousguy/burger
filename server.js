@@ -15,6 +15,19 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 
 //handlebars
-app.enging('handlebars', exphbs ({
-  
-}))
+app.engine('handlebars', exphbs ({
+    defaultLayout: 'main'
+}));
+
+app.set('view engine', 'handlebars');
+app.set('views', __dirname + '/views');
+
+//routes
+//routes goes here
+
+//confirmation
+
+var port = process.env.PORT || 3000;
+app.listen(PORT, function() {
+    console.log('app is listening on Port: ' + PORT);
+});
