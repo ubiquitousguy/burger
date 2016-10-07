@@ -3,17 +3,17 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override')
 
 //database setup
-var Sequelize = require('sequelize'),
-	connection;
-if (process.env.JAWSDB_URL) {
-	connection = new Sequelize(process.env.JAWSDB_URL);
-} else {
-	connection = new Sequelize('todo_db', 'root', 'password', {
-		host: 'localhost',
-		dialect: 'mysql',
-		port: '3306'
-	})
-}
+// var Sequelize = require('sequelize'),
+// 	connection;
+// if (process.env.JAWSDB_URL) {
+// 	connection = new Sequelize(process.env.JAWSDB_URL);
+// } else {
+// 	connection = new Sequelize('todo_db', 'root', 'password', {
+// 		host: 'localhost',
+// 		dialect: 'mysql',
+// 		port: '3306'
+// 	})
+// }
 
 //middleware
 var app = express();
